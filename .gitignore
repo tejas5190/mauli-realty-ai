@@ -1,0 +1,30 @@
+# Secrets
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*credentials*
+*secret*
+secrets/
+
+# Private operational data
+private/
+customer-data/
+lead-data/
+owner-documents/
+property-private/
+uploads/
+media-private/
+*.sqlite
+*.db
+
+# Runtime files
+node_modules/
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.DS_Store
+Thumbs.db

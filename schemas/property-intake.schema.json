@@ -1,0 +1,26 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Property Intake",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["company_id", "property_id", "property_title", "property_type", "transaction_type", "locality", "city", "description", "source_recorded_at"],
+  "properties": {
+    "company_id": {"type": "string", "minLength": 1},
+    "property_id": {"type": "string", "minLength": 1},
+    "property_title": {"type": "string", "minLength": 1},
+    "property_type": {"type": "string", "enum": ["apartment", "villa", "plot", "commercial", "office", "shop", "other"]},
+    "transaction_type": {"type": "string", "enum": ["sale", "rent", "lease"]},
+    "locality": {"type": "string", "minLength": 1},
+    "city": {"type": "string", "minLength": 1},
+    "project_name": {"type": ["string", "null"]},
+    "price_amount": {"type": ["number", "null"], "minimum": 0},
+    "price_currency": {"type": "string", "default": "INR"},
+    "configuration": {"type": ["string", "null"]},
+    "carpet_area_sqft": {"type": ["number", "null"], "exclusiveMinimum": 0},
+    "maharera_number": {"type": ["string", "null"]},
+    "description": {"type": "string", "minLength": 1},
+    "media_references": {"type": "array", "items": {"type": "string"}, "default": []},
+    "source_recorded_at": {"type": "string", "format": "date-time"},
+    "verification_status": {"type": "string", "enum": ["unverified", "partially_verified", "verified"], "default": "unverified"}
+  }
+}
