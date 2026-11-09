@@ -1,6 +1,6 @@
-# Mauli Realty — AI Marketing Operating System
+# Mauli Enterprises — AI Marketing Operating System
 
-Cloud-first, modular marketing operations for Mauli Realty.
+Cloud-first, modular marketing operations for Mauli Enterprises.
 
 ## Principles
 - Cloud-first: the user's PC is not a required development host or runtime.
